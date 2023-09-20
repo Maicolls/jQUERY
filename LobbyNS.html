@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MH shop</title>
+    <script src="https://kit.fontawesome.com/734c76f240.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Mooli&display=swap" rel="stylesheet">   
+    <link rel="stylesheet" href="Stilosh.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="jquery.js"></script>
+    <script src="easimg.js"></script>
+
+    <script>
+        /*Funciones del menu*/
+        $(document).ready(function(){
+           $('.button').click(function(){
+             if($(this).hasClass('expand')){
+               $('ul').slideUp(function(){
+                 $('.button').removeClass('expand');
+                 $('.fas').removeClass('expand')
+               });
+             }else{
+               $(this).addClass('expand');
+               setTimeout(function(){
+                 $('.fas').addClass('expand');
+                 $('ul').stop().slideDown();
+               },200);
+             }
+           });
+         });
+         /*Animacion imagen */
+         $(document).ready(function(){
+            $("#img1").mouseout(function(){
+                $(this).stop().animate({
+                    marginTop:"0"
+                },500,"easeInBack")});
+
+            $("#img1").mouseover(function(){
+                $(this).stop().animate({
+                    marginTop:"-250px"
+                },1000, "easeOutBack")
+
+            })
+        });
+        /*aca se interceda a la imagen scroll del medio de la pagina*/
+        window.onscroll = function(){
+
+            var posicion = window.pageYOffset || document.documentElement.scrollTop;
+
+            var elemento1 = document.getElementById("icon_heart");
+            var elemento2 = document.getElementById("icon_fire");
+
+            elemento1.style.bottom = posicion * 0.2 + "px";
+            elemento2.style.top = posicion * 0.1 + "px";
+
+        };
+        /*Aca se intercede a los botones de la moda*/
+        /*Boton uno*/
+        $(function(){
+            $("#botoncito").click(function(){
+                $("#vintage").slideToggle(2500)
+            });
+        });
+        /*Boton dos*/
+        $(function(){
+            $("#slideDown2").click(function(){
+                $("#Overzice").slideToggle(2500)
+            });
+        });
+      /*Imagenes equipo de trabajo*/
+        $(document).ready(function(){
+            $("#card").mouseout(function(){
+                $(this).stop().animate({
+                    marginTop:"0"
+                },500,"easeInExpo")});
+
+            $("#card").mouseover(function(){
+                $(this).stop().animate({
+                    marginTop:"-250px"
+                },5000, "easeOutExpo")
+
+            })
+        });
+        $(document).ready(function(){
+            $("#card2").mouseout(function(){
+                $(this).stop().animate({
+                    marginTop:"0"
+                },500,"easeInQuad")});
+
+            $("#card2").mouseover(function(){
+                $(this).stop().animate({
+                    marginTop:"-250px"
+                },5000, "easeOutQuad")
+
+            })
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <!--Creacion del header imagen central pagina -->
+        <div class="textos">
+            <h1 class="titulo">SHOP M&H</h1>
+            <h3 class="subtitulo">La tienda con flow y swing</h3>
+        </div>
+        <div class="skewedabajo"></div>
+        </div>
+    </header>
+    <!--Creacion del menu-->
+    <div class="menu-container">
+        <div class="button">
+           Menu
+           <span class="fas fa-bars"></span>
+        </div>
+        <ul>
+           <li><a href="#">Home</a></li>
+           <li><a href="#">Vintage</a></li>
+           <li><a href="#">Overzice</a></li>
+           <li><a href="#">Contactanos</a></li>
+        </ul>
+     </div>
+     <!--Creacion de la pagina principal-->
+    <main>
+        <div class="container__cover">
+            <div class="cover">
+                <div class="text__information" id="informacion1">
+                    <h1>¿QUE HACEMOS?</h1>
+
+                    <p> Somos una página diseñada para darle una <b>"nueva oportunidad"</b>  a la ropa que ya no uses,
+                        aquí puedes vender o comprar ropa de segunda mano en perfecto estado, así todos aportamos un granito de arena al mundo 
+                        con la finalidad de mitigar un poco el daño que genera la industria textil al planeta.
+                    </p>
+                </div>
+                <div class="media__cover">
+                    <img src="imagenes/header.jpg" alt="" id="img1">
+                </div>
+            </div>
+        </div>
+        <!--Creacion del banner de la pagina-->
+        <div class="container__banner">
+            <div class="banner">
+                <div class="icon">
+                    <img src="imagenes/banner1.jpg" id="icon_heart" alt="">
+                </div>
+                <div class="text">
+                    <h2>¿CUAL ES LA ROPA QUE VENDEREMOS?</h2>
+                        <p>La ropa que manejaremos será toda aquella que tú y como nuestros clientes quieran vender,
+                        claro esta que nos guiamos por dos "Modas" que en la actualidad compiten bastante. 
+                        La idea principal es que la ropa sea totalmente unisex, que se encuentre en buen estado y que te ayude a completar el outfit que buscas.
+                        </p>
+                </div>
+                <div class="img__icon-fire">
+                    <img src="imagenes/fondo login.jpg" id="icon_fire" alt="">
+                </div> 
+            </div>
+        </div>
+    </main>
+   
+<!--Creacion de los botones modas-->
+    <div class="text">
+        <a  style="--clr:#7400b8" id="botoncito"><span>Estilo Vintage</span><i></i></a>
+            <div id="vintage"><p>Hay una duda general sobre qué es considerado realmente ropa vintage. 
+                Como ya mencionamos esta debe tener cierta antigüedad, y no solo es la ropa sino también los accesorios.
+                El acuerdo general es que es ropa desde la década de 1920 hasta la de hace 20 años (alrededor de 1998).
+                </p>
+            </div>
+    </div>
+    <!--Creacion de la "galeria"-->
+    <section class="galeria">
+            <div class="sesgoarriba"></div>
+                <div class="imagenes none">
+                    <img src="imagenes/vintage slider.jpg" alt="">
+                </div>
+            <div class="imagenes">
+                <img src="imagenes/vintage slider2.jpg" alt="">
+            </div>
+            <div class="imagenes">
+                
+            <div class="encima">
+                <h2 class="maquina">TU ESTILO <br> NUESTRO RETO</h2>
+            </div>
+        </div>
+
+        <div class="imagenes">
+            <img src="imagenes/overzise slider.jpg" alt="">
+        </div>
+
+        <div class="imagenes none">
+            <img src="imagenes/overzise slider2.jpg" alt="">
+        </div>
+            <div class="sesgoabajo"></div>
+    </section>
+    <!--Boton-->
+    <div class="text"> 
+    <button class="boton doss" id="slideDown2"><span> ESTILO OVERCIZE </span></button>
+    <div id="Overzice"><p>Este estilo, que cada vez es más utilizado en todas las pasarelas, debe su nombre al inglés, y se traduce como “más grande” o “talla por encima de”, 
+    lo que hace referencia a la tendencia de usar prendas exageradamente sueltas y holgadas
+    </p>
+    </div>
+</div>
+
+
+<!--Equipo de trabajo-->
+<section class="miembros">
+    <div class="contenedor">
+        <h2 class="sobre-nosotros">Nuestro equipo</h2>
+        <h3 class="slogan">Conoce nuestro equipo de trabajo</h3>
+        <div class="cards">
+            <div class="card" id="card">
+                <img src="imagenes/equipo.jpg" alt="">
+                <h4>Maicol Gutierrez</h4>
+                <p>Analisi y desarollo de software</p>
+            </div>
+            <div class="card" id="card2">
+                <img src="imagenes/equipo.jpg" alt="">
+                <h4>Hector Gody</h4>
+                <p>Analisi y desarollo de software</p>
+            </div>
+        </div>
+    </div>
+
+<!--Footer-->
+<footer class="pie-pagina">
+    <div class="grupo-1">
+        <div class="box">
+            <figure>
+                    <img src="imagenes/mh-removebg-preview.png" alt="Logo de SLee Dw">
+                </a>
+            </figure>
+        </div>
+        <div class="box">
+            <h2>SOBRE NOSOTROS</h2>
+            <p>Programadores con estilo </p>
+        </div>
+    </div>
+    <div class="grupo-2">
+        <small>&copy; 2023 <b>MH SHOP</b> - Todos los Derechos Reservados.</small>
+    </div>
+</footer>
+</body>
+</html>

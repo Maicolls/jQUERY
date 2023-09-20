@@ -1,0 +1,655 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Rock+Salt&family=Space+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+/*=======================Intercepcion de login lineas 16 - 118==========================*/
+.baddy {
+  background-image: url(imagenes/mh.jpg);
+   background-size: 100% 100%;
+   background-repeat: no-repeat;
+   background-attachment: fixed;
+   display: flexs;
+   
+}
+.wrapper{
+    display: flex;
+    max-width: 560px;
+    width: 100%;
+    height: 350px;
+    position: absolute;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+  }
+  
+  .wrapper .left,
+  .wrapper .right{
+    width: 50%;
+    height: 100%;
+    padding: 30px;
+  }
+  
+  .wrapper .left{
+    background: beige ;
+  }
+  
+  .wrapper .left h3{
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #2c1010;
+    font-size: 20px;
+   
+    font-family: 'Shadows Into Light', cursive;
+ 
+  }
+  
+  .wrapper .left img{
+    display: block;
+    width: 220px;
+    margin: 25px auto 0;
+  }
+  
+  .wrapper .right{
+    background: #e30052;
+  }
+  
+  .wrapper .right .tabs ul{
+    text-align: center;
+  }
+  
+  .wrapper .right .tabs ul li{
+    display: inline-block;
+    margin: 5px;
+    padding: 5px 10px;
+    font-size: 14px;
+    color: #f3f6fa;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+    font-family: 'Shadows Into Light', cursive;
+  }
+  
+  .wrapper .right .tabs ul li.active{
+    border-bottom: 2px solid #050505;
+  }
+  
+  .wrapper .right .register,
+  .wrapper .right .login{
+    margin-top: 20px;
+  }
+  
+  .wrapper .right .input_field{
+    margin-bottom: 15px;
+  }
+  
+  .wrapper .right .input_field .input{
+    width: 100%;
+    padding: 10px 15px;
+    border: 0;
+    font-size: 12px;
+    background: #ecebeb;
+  }
+  
+  .wrapper .right .btn{
+    margin-top: 20px;
+    background: #030303;
+    padding: 10px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: bold;
+    
+  }
+  
+  .wrapper .right .btn a{
+    color: #fff;
+    display: block;
+    font-size: 14px;
+  }
+/*===============================Final login============================*/
+/*=============Intercepcion pagina lobby header linea 121 - 117======================*/
+header {
+  width: 100%;
+  height: 950px;
+  background-image: url(imagenes/mh.jpg);
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+  color: #000000;
+  text-align: center;
+}
+
+
+header .textos {
+  margin-top: 352px;
+
+}
+
+header .titulo {
+  font-size: 85px;
+  
+}
+
+header .subtitulo {
+  font-size: 42px;
+  font-weight: 300;
+  margin-bottom: 32px;
+  font-family: 'Rock Salt', cursive;
+}
+
+
+.skewedabajo {
+  z-index: 10;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border-width: 0 0 35vh 100vw;
+  border-style: solid;
+  border-color: transparent transparent #5601a3 transparent;
+}
+
+.skewedarriba {
+  z-index: 10;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-width: 35vh 100vw 0 0;
+  border-style: solid;
+  border-color: #fff transparent transparent transparent;
+}
+/*=============Final header===============*/
+/*===================MENU==========================0*/
+.menu-container{
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.button{
+  position: relative;
+  background: #e30052;
+  color: white;
+  font-size: 20px;
+  padding: 8px 20px;
+  width: 150px;
+  line-height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: width .4s;
+}
+.button.expand{
+  width: 100%;
+}
+.fas.expand:before{
+  content: '\f00d';
+}
+ul{
+  list-style: none;
+  position: absolute;
+  top: 65px;
+  display: block;
+  background: #a300e3;
+  width: 100%;
+  text-align: center;
+  border-radius: 5px;
+  display: none;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.3);
+}
+ul:before{
+  position: absolute;
+  content: '';
+  width: 20px;
+  height: 20px;
+  background: #a300e3;
+  top: -10px;
+  right: 15px;
+  transform: rotate(45deg);
+  z-index: -1;
+}
+ul li{
+  line-height: 35px;
+  padding: 8px 20px;
+  cursor: pointer;
+  border: 1px solid transparent;
+  border-bottom: 1px solid rgba(255,255,255,.1);
+}
+ul li:last-child{
+  border-bottom: none;
+}
+ul li:hover{
+  box-shadow: inset 0 0 5px #33ffff,
+              inset 0 0 10px #66ffff;
+}
+ul li:hover:first-child{
+  border-radius: 5px 5px 0 0;
+}
+ul li:hover:last-child{
+  border-radius: 0 0 5px 5px;
+}
+ul li a{
+  color: white;
+  font-size: 18px;
+  text-decoration: none;
+}
+ul li:hover a{
+  color: cyan;
+}
+
+/*======================MAIN=========================*/
+main{
+  height: calc(100vh + 800px);
+  background: #5601a3 ;
+}
+
+.container__cover{
+  max-width: 1200px;
+  margin: auto;
+}
+
+.cover{
+  padding-top: 60px;
+  display: flex;
+}
+#informacion1{
+  width: 50%;
+}
+.text__information{
+  width: 50%;
+}
+
+.text__information h1{
+  font-size: 60px;
+  font-family: 'Acme', sans-serif;
+  color: #ecebeb;
+}
+
+.text__information p{
+  font-size: 25px;
+  margin-top: 40px;
+  font-family: 'Acme', sans-serif;
+  color: #ecebeb;
+}
+#img1{
+  width: 500px;
+  height: 500px;
+}
+/*======================FINAL DEL MAIN======================*/
+/*=======================Creacion del banner para la pagiana inicial======================*/
+.container__banner{
+  max-width: 1200px;
+  margin: auto;
+  margin-top: 300px;
+}
+
+.banner{
+  height: 320px;
+  display: flex;
+  align-items: center;
+  background: #121214;
+  position: relative;
+}
+
+.banner .icon{
+  width: 40%;
+}
+
+
+.banner .text{
+  width: 30%;
+  position: relative;
+}
+
+.banner .text h2{
+  color: rgb(190, 13, 13);
+  font-size: 32px;
+  font-weight: 400;
+  font-family: 'Gochi Hand', cursive;
+}
+
+.banner .text p{
+  margin-top: 10px;
+  background: transparent;
+  color: rgb(245, 248, 243);
+  border: none;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: bold;
+  transition: color 300ms;
+  font-family: 'Shadows Into Light', cursive;
+}
+
+.img__icon-fire{
+  height: 100%;
+  position: absolute;
+  right: 10px;
+  overflow: hidden;
+}
+
+#icon_heart{
+  width: 400px;
+  margin-top: 300px;
+  position: relative;
+  filter: drop-shadow(-40px 0px 30px rgba(10, 5, 26, 0.5));
+}
+#icon_fire{
+  width: 300px;
+  position: relative;
+  margin-top: -100px;
+  opacity: 0.6;
+}
+/*==============Final de la creacion del banner====================*/
+/*================CREACION DE BOTONES PARA EL TIPO DE ROPA ======================*/
+#botoncito{
+  position: relative ;
+  bottom: 30px;
+  background: #eddbdb;
+  box-shadow: rgb(12, 12, 1);
+  color: #fff;
+  color: #0f0404;
+  text-decoration: none;
+  text-transform: uppercase;
+  cursor: grab;
+  font-size: 1.5em;
+  letter-spacing: 0.1em;
+  font-weight: 400;
+  padding: 30px 20px;
+  transition: 0.5s;
+  margin: 0px 0px 430px 790px;
+}
+#botoncito:hover{
+  background: var(--clr );
+  color: var(--clr );
+  letter-spacing: 0.25em;
+  letter-spacing: 0.25em;
+}
+#botoncito:before{
+  content: "";
+  position: absolute;
+  inset: 2px;
+  background: #758bfd;
+}
+#botoncito span{
+  position: relative;
+  z-index: 1;
+}
+#botoncito i{
+  position: absolute;
+  inset: 0;
+  display: block;
+}
+#botoncito i::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 80%;
+  width: 10px;
+  height: 4px;
+  background: rgb(219, 29, 29);
+  transform: translateX(-50%) skew(325deg);
+  transition: 0.5s;
+}
+#botoncito:hover i::before{
+  width: 20px;
+  left: 20%;
+}
+#botoncito i::after{
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 80%;
+  width: 10px;
+  height: 4px;
+  background: rgb(202, 8, 8);
+  transform: translateX(-50%) skew(325deg);
+  transition: 0.5s;
+}
+#botoncito:hover i::after{
+  width: 30px;
+  left: 90%;
+}
+/*======================BOTON DOSS=====================================*/
+.boton {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	height: 100px;
+  width: 300px;
+	background: #141414;
+	color: #fff;
+	font-family: 'Roboto', sans-serif;
+	font-size: 20px;
+	font-weight: 500;
+	border: none;
+	cursor: -webkit-zoom-in;
+	text-transform: uppercase;
+	transition: .3s ease all;
+	border-radius: 5px;
+	position: relative;
+	overflow: hidden;
+  margin: 10px 400px 130px 790px;
+  box-shadow: 30px 30px 50px 10px rgba(204, 4, 161, 0.849);
+}
+.boton span {
+	position: relative;
+	z-index: 2;
+	transition: .3s ease all;
+}
+.boton.doss::after {
+  content: "";
+  width: 100%;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: calc(-100% - 80px);
+  border-bottom: 100px solid #5601a3;
+  border-right: 80px solid transparent;
+  transition: .7s ease-in-out all;
+}
+
+.boton.doss:hover::after {
+  left: 0;
+}
+/*======================Contenido botones============================0*/
+#vintage{
+  padding: 100px;
+  width: 100%;
+  text-align: center;
+  font-size: 20px;
+  display: none;
+  background-image: url(imagenes/Vintage.jpg);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color:beige;
+  font-family: 'Shadows Into Light', cursive;
+  
+}
+#Overzice{
+  padding: 60px;
+  width: 90%;
+  text-align: center;
+  font-size: 20px;
+  margin: auto;
+  display: none;
+  background-image: url(imagenes/Overz.jpg);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: #00bdec;
+  font-family: 'Shadows Into Light', cursive;
+}
+/*==========================INTERCEPCION DE GALERIA DIAGONAL====================================*/
+.sesgoabajo {
+  z-index: 10;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border-width: 0 0 15vh 100vw;
+  border-style: solid;
+  border-color: transparent transparent #fff transparent;
+}
+
+.sesgoarriba {
+  z-index: 10;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-width: 15vh 100vw 0 0;
+  border-style: solid;
+  border-color: #fff transparent transparent transparent;
+}
+.galeria {
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+  display: flex;
+  position: relative;
+  flex-wrap: wrap;
+}
+
+.imagenes {
+  width: 20%;
+  height: 500px;
+  overflow: hidden;
+  position: relative;
+}
+
+.imagenes img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.encima h2 {
+  position: absolute;
+  top: 45%;
+  text-align: center;
+  color: #080707;
+}
+.maquina{
+  width:  285px;   
+  animation: animacion 1.5s steps(25), transparent .5s step-end infinite alternate;
+  animation-iteration-count: infinite;
+  white-space: nowrap;
+  overflow: hidden;
+  color: #fff;
+  border-right: 3px solid;
+  font-family: 'Rock Salt', cursive;
+}
+
+@keyframes animacion {
+  from {
+    width: 0px
+  }
+}
+    
+@keyframes transparent {
+  50% {
+    border-color: transparent
+  }
+}
+/*================Equipo de trabajo==============================*/
+.contenedor {
+  width: 90%;
+  max-width: 1000px;
+  margin: auto;
+  overflow: hidden;
+  padding: 52px 0;
+}
+.sobre-nosotros {
+  text-align: center;
+  font-size: 56px;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.slogan {
+  font-size: 24px;
+  font-weight: 300;
+  text-align: center;
+  margin-bottom: 24px;
+}
+.cards {
+  width: 100%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.card {
+  margin: 20px 0;
+  width: 30%;
+  height: 250px;
+  text-align: center;
+  padding: 20px;
+  background-color: #7209b7;
+  box-shadow: 30px 30px 50px 10px rgba(204, 4, 161, 0.849);
+}
+
+.cards img {
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 100%;
+}
+
+/*=====================Footer===========================*/
+.pie-pagina{
+  width: 100%;
+  background-color: #0a141d;
+}
+.pie-pagina .grupo-1{
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap:50px;
+  padding: 45px 0px;
+}
+.pie-pagina .grupo-1 .box figure{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.pie-pagina .grupo-1 .box figure img{
+  width: 250px;
+}
+.pie-pagina .grupo-1 .box h2{
+  color: #fff;
+  margin-bottom: 25px;
+  font-size: 20px;
+}
+.pie-pagina .grupo-1 .box p{
+  color: #efefef;
+  margin-bottom: 10px;
+}
+.pie-pagina .grupo-2{
+  background-color: #0a1a2a;
+  padding: 15px 10px;
+  text-align: center;
+  color: #fff;
+}
+.pie-pagina .grupo-2 small{
+  font-size: 15px;
+}

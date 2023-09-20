@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Niches con Swing</title>
+     <link rel="stylesheet" href="url('https://fonts.googleapis.com/css2?family=Caveat&family=Shadows+Into+Light&display=swap');"> 
+    <link rel="stylesheet" href="Stilosh.css">
+    <script src="jquery.js"></script>
+    <script>
+      /*Inicio de implementacion jquey login*/
+      $(document).ready(function(){ 
+        /*Se afectara el apartado del login*/
+        $(".login").hide();
+        $(".register_li").addClass("active");
+
+        /*Se comienza a dividir las obciones para que el usuario se registre o ingrese*/
+        $(".login_li").click(function(){
+          $(this).addClass("active");
+          $(".register_li").removeClass("active");
+          $(".login").show();
+          $(".register").hide();
+        });
+
+        $(".register_li").click(function(){
+          $(this).addClass("active");
+          $(".login_li").removeClass("active");
+          $(".register").show();
+          $(".login").hide();
+        });
+
+      });
+    </script>
+</head>
+<body class="baddy"> 
+  
+
+    <div class="wrapper">
+        <div class="left">
+            <h3>SHOP M&H</h3>   
+          <img src="imagenes/fondo login 2.jpg" alt="">
+        </div>
+        <div class="right">
+          <div class="tabs">
+            <ul>
+              <li class="register_li">Registrar </li>
+              <li class="login_li">ingresar</li>
+            </ul>
+          </div>
+          
+          <div class="register">
+            <div class="input_field">
+              <input type="text" required placeholder="Nombre completo" class="input">
+            </div>
+            <div class="input_field">
+              <input type="text" placeholder="E-mail" class="input"  autocomplete="off">
+            </div>
+            <div class="input_field">
+              <input type="password" placeholder="Contraseña" class="input">
+            </div>
+            <div class="btn"><a id="register" href="LobbyNS.html">Register</a></div>
+          </div>
+          
+          <div class="login">
+            <div class="input_field">
+              <input type="text" placeholder="E-mail" class="input" autocomplete="off">
+            </div>
+            <div class="input_field">
+              <input type="password" placeholder="Contraseña" class="input">
+            </div>
+            <div class="btn"><a href="LobbyNS.html">Login</a></div>
+          </div>  
+        </div>
+      </div>
+
+      
+         
+</body>
+</html>
